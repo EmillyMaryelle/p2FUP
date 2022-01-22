@@ -1,0 +1,8 @@
+palavras = str(input('Digite uma frase: ')).split()
+
+def joinStr(palavras):
+    
+    print(palavras)
+    txt= ''.join(palavras)
+    print([txt])
+print(joinStr(palavras))
