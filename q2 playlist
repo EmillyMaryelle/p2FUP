@@ -1,0 +1,76 @@
+#Emilly Maryelle Xavier Pereira numero 519378
+
+music=[]
+dados=[]
+navegar=[]
+sobre={}
+artista_da_musica={}
+generos=['pop', 'reggae', 'rap', 'rock']
+
+def menu() : 
+   option = int(input('''
+          "         **** Bem Vindo ao SongMusic******            *"
+          "         **** Aba de adiministrador******              *"
+          "[1]  Cadastrar uma musica                             *"
+          "[2]  Exibir musicas disponiveis                       *"
+          "[3]  Procurar musicas                                 *"
+
+           '''))
+
+   return option 
+
+def playlist() : 
+    identificador = str(input('Me informa o codigo de identificação: ')) 
+    musica1 = str(input('Qual o nome da musica?  '))
+    artista_da_musica =str(input('Qual o nome do Artista?  '))
+    genero =str(input('Qual o genero: '))
+    duracao = float(input('Duração: '))
+    sobre = [identificador,musica1,artista_da_musica,genero,duracao]
+    music.append(sobre)
+    if genero == 'pop':
+        generos[0]
+    elif genero == 'rock':
+        generos[3]
+    elif genero == 'reggae':
+        generos[1]
+    elif genero == 'rap':
+        generos[2]   
+
+def exibir(): 
+  for list in music:
+   print('''
+      Identificador: Musica:  Cantor/Artista:  Genero: H/M:
+       {}        {}          {}        {}        {}   
+  
+        '''.format(list[0],list[1], list[2], list[3], list[4]))
+
+def filtro (): 
+    mostra= str(input('Pesquise por um artista ou um gênero: '))
+    for mostra in playlist:
+        if ('generos' [mostra == 'generos[0]']):
+            print('pop')
+        elif ('generos' [mostra == 'generos[1]']):
+            print('reggae')
+        elif ('generos' [mostra == 'generos[2]']):
+            print('rap')
+        elif ('generos' [mostra == generos[3]]):
+            print ('rock')
+    def calculo():
+        soma=0
+        for f in music:
+            soma+=f['duracao']
+            print(soma)
+   
+
+
+def botão() : 
+
+    while True:
+        option = menu()
+        if option == 1 :
+            playlist()
+        if option == 2 :
+            exibir()
+        if option == 3 :
+            filtro()
+botão()
